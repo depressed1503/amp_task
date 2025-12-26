@@ -19,7 +19,7 @@ class Booking(models.Model):
 
     class Meta:
         constraints = [
-            models.UniqueConstraint(fields=["event", "user_id"], name="uniq_booking_per_user_event"),
+            models.UniqueConstraint(fields=["event", "user"], name="uniq_booking_per_user_event"),
         ]
         indexes = [
             models.Index(fields=["event"]),
